@@ -533,7 +533,7 @@ export class AnnotationFactory {
                             this.toDelete.push(annot)
                             resolve(this.toDelete)
                             return
-                        } else if (id.obj && annot.object_id && id.obj === annot.object_id.obj && id.generation && id.generation === annot.object_id.generation) {
+                        } else if (id.obj && annot.object_id && id.obj === annot.object_id.obj && id.generation !== undefined && id.generation === annot.object_id.generation) {
                             this.toDelete.push(annot)
                             resolve(this.toDelete)
                             return
